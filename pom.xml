@@ -11,14 +11,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
-
     <groupId>com.fh</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
         <module>project-api</module>
+        <module>project-service-api</module>
+        <module>project-service</module>
     </modules>
 
     <properties>
