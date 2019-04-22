@@ -1,0 +1,9 @@
+/**/.project
+/**/.settings
+/**/target
+/**/.classpath
+/**/*.iml
+*.idea
+.apt_generated
+/**/*.factorypath
+logs/

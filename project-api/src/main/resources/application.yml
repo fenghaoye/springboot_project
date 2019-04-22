@@ -3,5 +3,4 @@ server:
 
 baseDir: test1
 
-
 TestConditionalOnProperty: 1
