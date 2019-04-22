@@ -19,6 +19,7 @@
         <module>project-api</module>
         <module>project-service-api</module>
         <module>project-service</module>
+        <module>spring-aop</module>
     </modules>
 
     <properties>
@@ -50,6 +51,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
