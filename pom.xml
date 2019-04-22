@@ -20,6 +20,7 @@
         <module>project-service-api</module>
         <module>project-service</module>
         <module>spring-ioc</module>
+        <module>spring-aop</module>
     </modules>
 
     <properties>
