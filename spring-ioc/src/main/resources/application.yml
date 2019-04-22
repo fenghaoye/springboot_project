@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+baseDir: test1
+
+TestConditionalOnProperty: 1
