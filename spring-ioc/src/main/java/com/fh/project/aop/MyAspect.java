@@ -9,7 +9,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyAspect {
 
-    @Pointcut("execution(* com.fh.project.*.*(..))")// the pointcut expression
+    /*@Pointcut("execution(* com.fh.project.service.TestServiceImpl.*())")// the pointcut expression
+    public void anyOldTransfer(){
+
+    }*/
+    @Pointcut("execution(* com.fh.project..*.*(..))")// the pointcut expression
     public void anyOldTransfer(){
 
     }

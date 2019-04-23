@@ -11,7 +11,7 @@ public class TestAspect {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext configApplicationContext =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-        TestServiceImpl bean = configApplicationContext.getBean(TestServiceImpl.class);
+        TestAopService bean = configApplicationContext.getBean(TestAopService.class);
         bean.hello();
     }
 
