@@ -21,6 +21,7 @@
         <module>project-service</module>
         <module>spring-ioc</module>
         <module>spring-aop</module>
+        <module>spring-proxy</module>
     </modules>
 
     <properties>
