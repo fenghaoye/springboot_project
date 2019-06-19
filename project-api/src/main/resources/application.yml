@@ -1,6 +1,10 @@
 server:
   port: 8080
 
+spring:
+  profiles:
+    active: dev
+
 baseDir: test1
 
 TestConditionalOnProperty: 1
