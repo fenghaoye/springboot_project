@@ -1,0 +1,11 @@
+# DataSource Config
+spring:
+  datasource:
+    url: jdbc:mysql://47.106.125.14:3306/lubanvip?characterEncoding=UTF-8&useUnicode=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath*:com/fenghao/**/mapper/**/*.xml
+  #type-aliases-package: com.fenghao.mybatis.entity #不配置这一项也可以，原因有待考证
