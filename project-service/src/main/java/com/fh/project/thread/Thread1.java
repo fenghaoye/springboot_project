@@ -19,5 +19,7 @@ public class Thread1 extends Thread {
         Thread1 thread = new Thread1();
         thread.start();
         //thread.join(1000);
+
+
     }
 }

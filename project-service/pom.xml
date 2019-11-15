@@ -26,6 +26,12 @@
             <artifactId>project-service-api</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.lxzl.systemframework</groupId>
+            <artifactId>lxse</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -16,7 +16,6 @@ public class TestController {
     private String baseDir;
 
     @Autowired
-    @Qualifier("test2ServiceImpl")
     private TestService testService2;
     @Autowired
     private People people;
