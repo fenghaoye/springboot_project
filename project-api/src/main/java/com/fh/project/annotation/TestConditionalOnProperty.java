@@ -1,7 +1,6 @@
 package com.fh.project.annotation;
 
 import com.fh.project.TestService;
-import com.fh.project.TestServiceImpl;
 import com.fh.project.entity.People;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -25,8 +24,9 @@ public class TestConditionalOnProperty {
     //@ConfigurationProperties(prefix = "spring.second.datasource")
     //@ConfigurationProperties
     public TestService testService() {
-        return new TestServiceImpl();
+        //return new TestServiceImpl();
 
+        return null;
     }
 
     @Bean
