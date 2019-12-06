@@ -1,6 +1,8 @@
 package com.fh.project.basic.staticDemo;
 
-public class A {
+import java.util.function.Supplier;
+
+public class A  implements Supplier {
 
     // 静态资源的假装顺序是严格按照静态资源的定义顺序来假装的
     private static int a = b();
@@ -40,4 +42,8 @@ public class A {
         System.out.println(d);
     }
 
+    @Override
+    public Object get() {
+        return null;
+    }
 }
