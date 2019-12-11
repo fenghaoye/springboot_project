@@ -33,16 +33,16 @@ public class ArrayLRU {
                 for (int y = i; y < length - 1; y++) {
                     array[y] = array[y + 1];
                 }
-                array[length-1] = num;
+                array[length - 1] = num;
                 return;
             }
         }
         if (n == length) {
             // 缓存已满
-            for (int i = 0; i < length-1; i++) {
+            for (int i = 0; i < length - 1; i++) {
                 array[i] = array[i + 1];
             }
-            array[length-1] = num;
+            array[length - 1] = num;
         } else {
             array[length] = num;
             length++;
@@ -50,7 +50,7 @@ public class ArrayLRU {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{1, 2, 3, 5, 6};
+/*        int[] array = new int[]{1, 2, 3, 5, 6};
         ArrayLRU arrayLRU = new ArrayLRU(3);
         arrayLRU.insert(1);
         arrayLRU.insert(2);
@@ -61,6 +61,15 @@ public class ArrayLRU {
         arrayLRU.insert(5);
         arrayLRU.insert(6);
         arrayLRU.insert(1);
-        arrayLRU.insert(2);
+        arrayLRU.insert(2);*/
+
+        System.out.println(1 >> 3);
+
+        int[] array = new int[]{1, 2, 3, 5};
+        int i1 = array[0];
+        System.out.println(i1);
+        i1 = 5;
+        System.out.println(array[0]);
+
     }
 }
