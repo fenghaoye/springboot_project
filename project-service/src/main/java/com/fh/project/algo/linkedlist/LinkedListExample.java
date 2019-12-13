@@ -25,7 +25,7 @@ public class LinkedListExample<T> {
     }
 
 
-    // 两个有序的链表合并
+    // 两个有序的链表合并，我写的
     public Node mergeTwoSortedLinkedList(Node node1, Node node2) {
         Node head = null;
         while (node1 != null || node2 != null) {
@@ -53,16 +53,16 @@ public class LinkedListExample<T> {
 
     }
 
+    // // 两个有序的链表合并，案例代码
     public Node mergeTwoLists(Node l1, Node l2) {
         Node soldier = new Node(0); //利用哨兵结点简化实现难度 技巧三
         Node p = soldier;
 
-        while ( l1 != null && l2 != null ){
-            if ( (int)l1.element < (int)l2.element ){
+        while (l1 != null && l2 != null) {
+            if ((int) l1.element < (int) l2.element) {
                 p.next = l1;
                 l1 = l1.next;
-            }
-            else{
+            } else {
                 p.next = l2;
                 l2 = l2.next;
             }
@@ -70,11 +70,35 @@ public class LinkedListExample<T> {
             p = p.next;
         }
 
-        if (l1 != null) { p.next = l1; }
-        if (l2 != null) { p.next = l2; }
+        if (l1 != null) {
+            p.next = l1;
+        }
+        if (l2 != null) {
+            p.next = l2;
+        }
         return soldier.next;
     }
 
+
+    // 链表中 环的检测
+    public boolean checkCycle(Node node) {
+        if (node == null) {
+            return false;
+        }
+        Node slow = node;
+        Node fast = node;
+
+
+        while (fast.next != null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (slow == fast) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     // 遍历插入数据到链表中
     public Node insert(int[] nums) {
