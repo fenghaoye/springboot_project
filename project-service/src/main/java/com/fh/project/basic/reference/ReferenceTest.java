@@ -5,7 +5,7 @@ public class ReferenceTest<T> {
     public Node mergeTwoSortedLinkedList() {
         Node head = null;
         Node temp = new Node(1);
-        // TODO 传递失败
+        // 传递失败
         insert(head, temp);
         return head;
 
@@ -14,16 +14,16 @@ public class ReferenceTest<T> {
     private Node insert(Node head, Node node) {
         if (head == null) {
             head = node;
+        } else {
+            Node tail = head;
+            while (tail.next != null) {
+                tail = tail.next;
+            }
+            tail.next = node;
+
         }
-        Node tail = head;
-        while (tail.next != null) {
-            tail = tail.next;
-        }
-        tail.next = node;
         return head;
     }
-
-    private Node head;
 
     class Node<T> {
 

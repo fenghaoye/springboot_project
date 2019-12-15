@@ -100,6 +100,33 @@ public class LinkedListExample<T> {
         return false;
     }
 
+    // 删除链表倒数的第 n 个结点
+    public void deleteTailNode(int n) {
+        if (head == null) {
+            return;
+        }
+        int total = 1;
+        Node next = head;
+        while (next.next != null) {
+            total++;
+            next = next.next;
+        }
+        if (n > total || n == 0) {
+            return;
+        }
+        int deleteNum = total - n;
+        int num = 0;
+        Node preNode = new Node(null, head);
+        while (preNode.next != null) {
+            if (deleteNum == num) {
+                preNode.next = preNode.next.next;
+            } else {
+                num++;
+                preNode = preNode.next;
+            }
+        }
+    }
+
     // 遍历插入数据到链表中
     public Node insert(int[] nums) {
         for (int number : nums) {
@@ -142,6 +169,11 @@ public class LinkedListExample<T> {
         public Node(T element) {
             this.element = element;
         }
+
+        public Node(T element, Node node) {
+            this.element = element;
+            this.next = node;
+        }
     }
 
 
@@ -154,18 +186,23 @@ public class LinkedListExample<T> {
     }
 
     public static void main(String[] args) {
-        LinkedListExample example1 = new LinkedListExample();
-        LinkedListExample example2 = new LinkedListExample();
-        example1.insert(new int[]{1, 3, 4, 7, 9});
-        example1.printAll(example1.head);
-        example2.insert(new int[]{1, 2, 3, 5, 10});
-        example2.printAll(example2.head);
-        //LinkedListExample.Node node = example1.mergeTwoSortedLinkedList(example1.head, example2.head);
-        LinkedListExample.Node node = example1.mergeTwoLists(example1.head, example2.head);
-        example2.printAll(node);
+//        LinkedListExample example1 = new LinkedListExample();
+//        LinkedListExample example2 = new LinkedListExample();
+//        example1.insert(new int[]{1, 3, 4, 7, 9});
+//        example1.printAll(example1.head);
+//        example2.insert(new int[]{1, 2, 3, 5, 10});
+//        example2.printAll(example2.head);
+//        //LinkedListExample.Node node = example1.mergeTwoSortedLinkedList(example1.head, example2.head);
+//        LinkedListExample.Node node = example1.mergeTwoLists(example1.head, example2.head);
+//        example2.printAll(node);
+//
+//        example1.printAll(example1.reverse(example2.head));
 
-        example1.printAll(example1.reverse(example2.head));
-
+        // 测试删除倒数第n个节点
+        LinkedListExample example3 = new LinkedListExample();
+        example3.insert(new int[]{1, 3, 4, 7, 9});
+        example3.deleteTailNode(5);
+        example3.printAll(example3.head);
     }
 
 }
