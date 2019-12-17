@@ -1,5 +1,7 @@
 package com.fh.project.algo.linkedlist;
 
+import java.util.Map;
+
 /**
  * 链表案例：
  * 单链表反转
@@ -125,6 +127,33 @@ public class LinkedListExample<T> {
                 preNode = preNode.next;
             }
         }
+    }
+
+    // 删除倒数第K个结点
+    public  Node deleteLastKth(Node list, int k) {
+        Node fast = list;
+        int i = 1;
+        while (fast != null && i < k) {
+            fast = fast.next;
+            ++i;
+        }
+
+        if (fast == null) return list;
+
+        Node slow = list;
+        Node prev = null;
+        while (fast.next != null) {
+            fast = fast.next;
+            prev = slow;
+            slow = slow.next;
+        }
+
+        if (prev == null) {
+            list = list.next;
+        } else {
+            prev.next = prev.next.next;
+        }
+        return list;
     }
 
     // 遍历插入数据到链表中
