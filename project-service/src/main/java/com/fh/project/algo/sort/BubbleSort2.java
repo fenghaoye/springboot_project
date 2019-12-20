@@ -32,6 +32,6 @@ public class BubbleSort2 {
         int[] nums = {5, 3, 7, 2, 8, 6};
         int[] ints = BubbleSort2.bubbleSort(nums, nums.length);
         BubbleSort2.printAll(ints);
-        System.out.println("测试");
+
     }
 }
