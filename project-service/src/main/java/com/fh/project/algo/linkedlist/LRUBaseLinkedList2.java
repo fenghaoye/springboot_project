@@ -61,7 +61,7 @@ public class LRUBaseLinkedList2<T> {
     }
 
     public void add(T t) {
-        // 1、判断元素是否存在
+        // 1、判断元素是否存在，可以获取此元素的前一个元素
         Node preNode = findPreNode(t);
         // 2、不存在，判断容量是否已满，新增到链表
         if (preNode == null) {

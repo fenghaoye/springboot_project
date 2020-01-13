@@ -1,5 +1,7 @@
 package com.fh.project.algo.linkedlist;
 
+import java.util.Scanner;
+
 /**
  * 基于链表实现lru缓存淘汰算法
  */
@@ -37,12 +39,26 @@ public class LRUBaseLinkedList3<T> {
             insertHead(t);
         } else {
             // 删除，插入链表头部
-
+            deleteNode(findNode);
+            insertHead(t);
         }
     }
 
-    private void deleteNode(Node node) {
-
+    // 删除某个节点
+    private void deleteNode(Node deleteNode) {
+        Node node = head;
+        if (node.next == null) {
+            return;
+        }
+        while (node.next != null) {
+            if (node.next.t.equals(deleteNode.t)) {
+                node.next = node.next.next;
+                break;
+            } else {
+                node = node.next;
+            }
+        }
+        length--;
     }
 
     private void insertHead(T t) {
@@ -51,16 +67,16 @@ public class LRUBaseLinkedList3<T> {
         length++;
     }
 
-    // 删除尾部
+    // 删除尾部节点
     private void removeTail() {
         Node node = head;
         if (node.next == null) {
             return;
         }
-        while (node.next != null && node.next.next != null) {
+        while (node.next.next != null) {
             node = node.next;
         }
-        node.next = node.next.next;
+        node.next = null;
         length--;
     }
 
@@ -91,6 +107,24 @@ public class LRUBaseLinkedList3<T> {
 
         public Node() {
 
+        }
+    }
+
+    private void printAll() {
+        Node node = head.next;
+        while (node != null) {
+            System.out.print(node.t + ",");
+            node = node.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        LRUBaseLinkedList3 list = new LRUBaseLinkedList3(5);
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            list.offer(sc.nextInt());
+            list.printAll();
         }
     }
 
