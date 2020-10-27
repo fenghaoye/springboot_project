@@ -21,5 +21,7 @@ public class ReferenceTest2 {
         String str = "str1";
         test.setStr(str);
         System.out.println("方法中str的值：" + str);
+
+
     }
 }

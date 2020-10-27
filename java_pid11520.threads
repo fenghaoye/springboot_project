@@ -1,0 +1,103 @@
+Thread 0x7bf41a4a8
+
+  locals:
+
+Thread 0x7befd7a70
+  at java.net.SocketInputStream.socketRead0(Ljava/io/FileDescriptor;[BIII)I (Native Method)
+  at java.net.SocketInputStream.socketRead(Ljava/io/FileDescriptor;[BIII)I (SocketInputStream.java:116)
+  at java.net.SocketInputStream.read([BIII)I (SocketInputStream.java:171)
+  at java.net.SocketInputStream.read([BII)I (SocketInputStream.java:141)
+  at sun.nio.cs.StreamDecoder.readBytes()I (StreamDecoder.java:284)
+  at sun.nio.cs.StreamDecoder.implRead([CII)I (StreamDecoder.java:326)
+  at sun.nio.cs.StreamDecoder.read([CII)I (StreamDecoder.java:178)
+  at java.io.InputStreamReader.read([CII)I (InputStreamReader.java:184)
+  at java.io.BufferedReader.fill()V (BufferedReader.java:161)
+  at java.io.BufferedReader.readLine(Z)Ljava/lang/String; (BufferedReader.java:324)
+  at java.io.BufferedReader.readLine()Ljava/lang/String; (BufferedReader.java:389)
+  at com.intellij.rt.execution.application.AppMainV2$1.run()V (AppMainV2.java:64)
+
+  locals:
+    objectId=0x7befd7bf0, line=1
+    objectId=0x7befd7c20, line=1
+    objectId=0x7befe7800, line=1
+    objectId=0x7befd7bf0, line=2
+    objectId=0x7befe7800, line=2
+    objectId=0x7befd7c20, line=2
+    objectId=0x7befd7bf0, line=3
+    objectId=0x7befe7800, line=3
+    objectId=0x7befd7c40, line=4
+    objectId=0x7befd7c40, line=5
+    objectId=0x7befef7b8, line=5
+    objectId=0x7befd7c70, line=5
+    objectId=0x7bec00010, line=5
+    objectId=0x7befd7c40, line=6
+    objectId=0x7befef7b8, line=6
+    objectId=0x7befd7ca0, line=6
+    objectId=0x7befd7ca0, line=7
+    objectId=0x7befef7b8, line=7
+    objectId=0x7befd7cb8, line=8
+    objectId=0x7befd7cb8, line=9
+    objectId=0x7befd7ca0, line=9
+    objectId=0x7befd7cb8, line=10
+    objectId=0x7befd7a70, line=11
+    objectId=0x7befd7ce8, line=11
+    objectId=0x7befd7cb8, line=11
+
+Thread 0x7befd60d8
+
+  locals:
+
+Thread 0x7befd6250
+  at java.util.zip.Inflater.end(J)V (Native Method)
+  at java.util.zip.Inflater.end()V (Inflater.java:373)
+  at java.util.zip.Inflater.finalize()V (Inflater.java:383)
+  at java.lang.System$2.invokeFinalize(Ljava/lang/Object;)V (System.java:1270)
+  at java.lang.ref.Finalizer.runFinalizer(Lsun/misc/JavaLangAccess;)V (Finalizer.java:102)
+  at java.lang.ref.Finalizer.access$100(Ljava/lang/ref/Finalizer;Lsun/misc/JavaLangAccess;)V (Finalizer.java:34)
+  at java.lang.ref.Finalizer$FinalizerThread.run()V (Finalizer.java:217)
+
+  locals:
+    objectId=0x7befc7c50, line=1
+    objectId=0x7befc7c80, line=1
+    objectId=0x7befc7c50, line=2
+    objectId=0x7befbd188, line=3
+    objectId=0x7befc7c50, line=3
+    objectId=0x7bec2d508, line=4
+    objectId=0x7befbd188, line=4
+    objectId=0x7befc7c50, line=4
+    objectId=0x7bec2d508, line=5
+    objectId=0x7befbd188, line=5
+    objectId=0x7befd6250, line=6
+    objectId=0x7befbd188, line=6
+    objectId=0x7bec2d508, line=6
+
+Thread 0x7befd8ca0
+  at java.lang.Object.wait(J)V (Native Method)
+  at java.lang.Object.wait()V (Object.java:502)
+  at java.lang.ref.Reference.tryHandlePending(Z)Z (Reference.java:191)
+  at java.lang.ref.Reference$ReferenceHandler.run()V (Reference.java:153)
+
+  locals:
+    objectId=0x7befc6e38, line=1
+    objectId=0x7befc6e38, line=2
+    objectId=0x7befd8ca0, line=3
+
+Thread 0x7beffc0f8
+  at java.lang.OutOfMemoryError.<init>()V (OutOfMemoryError.java:48)
+  at java.util.Arrays.copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object; (Arrays.java:3210)
+  at java.util.Arrays.copyOf([Ljava/lang/Object;I)[Ljava/lang/Object; (Arrays.java:3181)
+  at java.util.ArrayList.grow(I)V (ArrayList.java:265)
+  at java.util.ArrayList.ensureExplicitCapacity(I)V (ArrayList.java:239)
+  at java.util.ArrayList.ensureCapacityInternal(I)V (ArrayList.java:231)
+  at java.util.ArrayList.add(Ljava/lang/Object;)Z (ArrayList.java:462)
+  at com.fh.project.basic.exception.HeapOOM.main([Ljava/lang/String;)V (HeapOOM.java:15)
+
+  locals:
+    objectId=0x7bf19f480, line=1
+    objectId=0x7bf00d300, line=1
+    objectId=0x7bf19f480, line=2
+    objectId=0x7befe4740, line=3
+    objectId=0x7befe4740, line=6
+    objectId=0x7bf716d60, line=6
+    objectId=0x7befe4740, line=7
+
